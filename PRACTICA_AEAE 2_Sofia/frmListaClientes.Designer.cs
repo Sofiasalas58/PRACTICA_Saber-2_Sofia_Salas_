@@ -32,7 +32,7 @@
             this.btnBuscar = new MaterialSkin.Controls.MaterialRaisedButton();
             this.btnNuevo = new MaterialSkin.Controls.MaterialRaisedButton();
             this.btnSalir = new MaterialSkin.Controls.MaterialRaisedButton();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgClientes = new System.Windows.Forms.DataGridView();
             this.Id_Cliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.strCliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.strDocumento = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -40,7 +40,7 @@
             this.btnEditar = new System.Windows.Forms.DataGridViewButtonColumn();
             this.btnBorrar = new System.Windows.Forms.DataGridViewButtonColumn();
             this.lblTitulo = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgClientes)).BeginInit();
             this.SuspendLayout();
             // 
             // txtbuscarporcliente
@@ -75,6 +75,7 @@
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseCompatibleTextRendering = true;
             this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // btnNuevo
             // 
@@ -110,21 +111,21 @@
             this.btnSalir.UseVisualStyleBackColor = true;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
-            // dataGridView1
+            // dgClientes
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgClientes.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Id_Cliente,
             this.strCliente,
             this.strDocumento,
             this.strTelefono,
             this.btnEditar,
             this.btnBorrar});
-            this.dataGridView1.Location = new System.Drawing.Point(12, 181);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(786, 177);
-            this.dataGridView1.TabIndex = 5;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.dgClientes.Location = new System.Drawing.Point(12, 181);
+            this.dgClientes.Name = "dgClientes";
+            this.dgClientes.Size = new System.Drawing.Size(786, 177);
+            this.dgClientes.TabIndex = 5;
+            this.dgClientes.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgClientes_CellContentClick);
             // 
             // Id_Cliente
             // 
@@ -182,7 +183,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.lblTitulo);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgClientes);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.btnNuevo);
             this.Controls.Add(this.btnBuscar);
@@ -190,7 +191,7 @@
             this.Name = "frmListaClientes";
             this.Text = "frmListaClientes";
             this.Load += new System.EventHandler(this.frmListaClientes_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgClientes)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -201,7 +202,7 @@
         private MaterialSkin.Controls.MaterialRaisedButton btnBuscar;
         private MaterialSkin.Controls.MaterialRaisedButton btnNuevo;
         private MaterialSkin.Controls.MaterialRaisedButton btnSalir;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgClientes;
         private System.Windows.Forms.DataGridViewTextBoxColumn Id_Cliente;
         private System.Windows.Forms.DataGridViewTextBoxColumn strCliente;
         private System.Windows.Forms.DataGridViewTextBoxColumn strDocumento;

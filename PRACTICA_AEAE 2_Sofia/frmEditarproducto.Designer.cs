@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.Titulo = new System.Windows.Forms.Label();
             this.pnlactualizarclientes = new System.Windows.Forms.Panel();
             this.txtCantidad = new MaterialSkin.Controls.MaterialSingleLineTextField();
@@ -35,10 +36,14 @@
             this.txtPrecioC = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.txtCodigo = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.txtNombrep = new MaterialSkin.Controls.MaterialSingleLineTextField();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this._IDP = new System.Windows.Forms.TextBox();
             this.btnSalir = new MaterialSkin.Controls.MaterialRaisedButton();
-            this.btnActualizar = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.btnGuardar = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.txtCategoria = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.txtDetalle = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.MensajeError = new System.Windows.Forms.ErrorProvider(this.components);
             this.pnlactualizarclientes.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.MensajeError)).BeginInit();
             this.SuspendLayout();
             // 
             // Titulo
@@ -55,6 +60,8 @@
             // 
             // pnlactualizarclientes
             // 
+            this.pnlactualizarclientes.Controls.Add(this.txtDetalle);
+            this.pnlactualizarclientes.Controls.Add(this.txtCategoria);
             this.pnlactualizarclientes.Controls.Add(this.txtCantidad);
             this.pnlactualizarclientes.Controls.Add(this.txtPrecioV);
             this.pnlactualizarclientes.Controls.Add(this.txtPrecioC);
@@ -62,7 +69,7 @@
             this.pnlactualizarclientes.Controls.Add(this.txtNombrep);
             this.pnlactualizarclientes.Location = new System.Drawing.Point(32, 156);
             this.pnlactualizarclientes.Name = "pnlactualizarclientes";
-            this.pnlactualizarclientes.Size = new System.Drawing.Size(426, 184);
+            this.pnlactualizarclientes.Size = new System.Drawing.Size(426, 247);
             this.pnlactualizarclientes.TabIndex = 3;
             // 
             // txtCantidad
@@ -151,12 +158,12 @@
             this.txtNombrep.Tag = "";
             this.txtNombrep.UseSystemPasswordChar = false;
             // 
-            // textBox1
+            // _IDP
             // 
-            this.textBox1.Location = new System.Drawing.Point(66, 120);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(41, 20);
-            this.textBox1.TabIndex = 4;
+            this._IDP.Location = new System.Drawing.Point(66, 120);
+            this._IDP.Name = "_IDP";
+            this._IDP.Size = new System.Drawing.Size(41, 20);
+            this._IDP.TabIndex = 4;
             // 
             // btnSalir
             // 
@@ -164,7 +171,7 @@
             this.btnSalir.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnSalir.Depth = 0;
             this.btnSalir.Icon = null;
-            this.btnSalir.Location = new System.Drawing.Point(319, 365);
+            this.btnSalir.Location = new System.Drawing.Point(400, 427);
             this.btnSalir.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Primary = true;
@@ -176,37 +183,77 @@
             this.btnSalir.UseVisualStyleBackColor = true;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
-            // btnActualizar
+            // btnGuardar
             // 
-            this.btnActualizar.AutoSize = true;
-            this.btnActualizar.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnActualizar.Depth = 0;
-            this.btnActualizar.Icon = null;
-            this.btnActualizar.Location = new System.Drawing.Point(159, 365);
-            this.btnActualizar.MouseState = MaterialSkin.MouseState.HOVER;
-            this.btnActualizar.Name = "btnActualizar";
-            this.btnActualizar.Primary = true;
-            this.btnActualizar.Size = new System.Drawing.Size(103, 36);
-            this.btnActualizar.TabIndex = 5;
-            this.btnActualizar.TabStop = false;
-            this.btnActualizar.Text = "Actualizar";
-            this.btnActualizar.UseCompatibleTextRendering = true;
-            this.btnActualizar.UseVisualStyleBackColor = true;
+            this.btnGuardar.AutoSize = true;
+            this.btnGuardar.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnGuardar.Depth = 0;
+            this.btnGuardar.Icon = null;
+            this.btnGuardar.Location = new System.Drawing.Point(298, 427);
+            this.btnGuardar.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnGuardar.Name = "btnGuardar";
+            this.btnGuardar.Primary = true;
+            this.btnGuardar.Size = new System.Drawing.Size(84, 36);
+            this.btnGuardar.TabIndex = 5;
+            this.btnGuardar.TabStop = false;
+            this.btnGuardar.Text = "Guardar";
+            this.btnGuardar.UseCompatibleTextRendering = true;
+            this.btnGuardar.UseVisualStyleBackColor = true;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
+            // 
+            // txtCategoria
+            // 
+            this.txtCategoria.Depth = 0;
+            this.txtCategoria.Hint = "Categoria";
+            this.txtCategoria.Location = new System.Drawing.Point(34, 166);
+            this.txtCategoria.MaxLength = 32767;
+            this.txtCategoria.MouseState = MaterialSkin.MouseState.HOVER;
+            this.txtCategoria.Name = "txtCategoria";
+            this.txtCategoria.PasswordChar = '\0';
+            this.txtCategoria.SelectedText = "";
+            this.txtCategoria.SelectionLength = 0;
+            this.txtCategoria.SelectionStart = 0;
+            this.txtCategoria.Size = new System.Drawing.Size(266, 23);
+            this.txtCategoria.TabIndex = 5;
+            this.txtCategoria.TabStop = false;
+            this.txtCategoria.UseSystemPasswordChar = false;
+            // 
+            // txtDetalle
+            // 
+            this.txtDetalle.Depth = 0;
+            this.txtDetalle.Hint = "Detalle";
+            this.txtDetalle.Location = new System.Drawing.Point(34, 195);
+            this.txtDetalle.MaxLength = 32767;
+            this.txtDetalle.MouseState = MaterialSkin.MouseState.HOVER;
+            this.txtDetalle.Name = "txtDetalle";
+            this.txtDetalle.PasswordChar = '\0';
+            this.txtDetalle.SelectedText = "";
+            this.txtDetalle.SelectionLength = 0;
+            this.txtDetalle.SelectionStart = 0;
+            this.txtDetalle.Size = new System.Drawing.Size(266, 23);
+            this.txtDetalle.TabIndex = 6;
+            this.txtDetalle.TabStop = false;
+            this.txtDetalle.UseSystemPasswordChar = false;
+            // 
+            // MensajeError
+            // 
+            this.MensajeError.ContainerControl = this;
             // 
             // frmEditarproducto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(535, 450);
+            this.ClientSize = new System.Drawing.Size(535, 534);
             this.Controls.Add(this.btnSalir);
-            this.Controls.Add(this.btnActualizar);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.btnGuardar);
+            this.Controls.Add(this._IDP);
             this.Controls.Add(this.pnlactualizarclientes);
             this.Controls.Add(this.Titulo);
             this.Name = "frmEditarproducto";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Administración de productos";
             this.pnlactualizarclientes.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.MensajeError)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -221,8 +268,11 @@
         private MaterialSkin.Controls.MaterialSingleLineTextField txtPrecioC;
         private MaterialSkin.Controls.MaterialSingleLineTextField txtCodigo;
         private MaterialSkin.Controls.MaterialSingleLineTextField txtNombrep;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox _IDP;
         private MaterialSkin.Controls.MaterialRaisedButton btnSalir;
-        private MaterialSkin.Controls.MaterialRaisedButton btnActualizar;
+        private MaterialSkin.Controls.MaterialRaisedButton btnGuardar;
+        private MaterialSkin.Controls.MaterialSingleLineTextField txtDetalle;
+        private MaterialSkin.Controls.MaterialSingleLineTextField txtCategoria;
+        private System.Windows.Forms.ErrorProvider MensajeError;
     }
 }

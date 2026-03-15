@@ -30,7 +30,6 @@
         {
             this.btnSalir = new MaterialSkin.Controls.MaterialRaisedButton();
             this.btnActualizar = new MaterialSkin.Controls.MaterialRaisedButton();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.pnlactualizarclientes = new System.Windows.Forms.Panel();
             this.txtEmail = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.txtTelefono = new MaterialSkin.Controls.MaterialSingleLineTextField();
@@ -82,13 +81,7 @@
             this.btnActualizar.Text = "Actualizar";
             this.btnActualizar.UseCompatibleTextRendering = true;
             this.btnActualizar.UseVisualStyleBackColor = true;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(75, 128);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(41, 20);
-            this.textBox1.TabIndex = 9;
+            this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
             // 
             // pnlactualizarclientes
             // 
@@ -285,7 +278,6 @@
             this.Controls.Add(this.materialLabel1);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.btnActualizar);
-            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.pnlactualizarclientes);
             this.Name = "frmEditaEmpleados";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -301,7 +293,6 @@
 
         private MaterialSkin.Controls.MaterialRaisedButton btnSalir;
         private MaterialSkin.Controls.MaterialRaisedButton btnActualizar;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Panel pnlactualizarclientes;
         private MaterialSkin.Controls.MaterialSingleLineTextField txtEmail;
         private MaterialSkin.Controls.MaterialSingleLineTextField txtTelefono;

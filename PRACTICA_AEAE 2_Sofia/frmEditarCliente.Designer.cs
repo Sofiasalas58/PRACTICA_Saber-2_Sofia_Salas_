@@ -28,17 +28,20 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.pnlactualizarclientes = new System.Windows.Forms.Panel();
             this.txtEmail = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.txtTelefono = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.txtDireccion = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.txtDocumento = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.txtNombre = new MaterialSkin.Controls.MaterialSingleLineTextField();
-            this.Titulo = new System.Windows.Forms.Label();
+            this.lblTitulo = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.btnActualizar = new MaterialSkin.Controls.MaterialRaisedButton();
             this.btnSalir = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.MensajeError = new System.Windows.Forms.ErrorProvider(this.components);
             this.pnlactualizarclientes.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.MensajeError)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlactualizarclientes
@@ -139,16 +142,16 @@
             this.txtNombre.Tag = "";
             this.txtNombre.UseSystemPasswordChar = false;
             // 
-            // Titulo
+            // lblTitulo
             // 
-            this.Titulo.AutoSize = true;
-            this.Titulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Titulo.ForeColor = System.Drawing.Color.Maroon;
-            this.Titulo.Location = new System.Drawing.Point(158, 83);
-            this.Titulo.Name = "Titulo";
-            this.Titulo.Size = new System.Drawing.Size(204, 25);
-            this.Titulo.TabIndex = 1;
-            this.Titulo.Text = "Nuevo registro Cliente";
+            this.lblTitulo.AutoSize = true;
+            this.lblTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitulo.ForeColor = System.Drawing.Color.Maroon;
+            this.lblTitulo.Location = new System.Drawing.Point(158, 83);
+            this.lblTitulo.Name = "lblTitulo";
+            this.lblTitulo.Size = new System.Drawing.Size(204, 25);
+            this.lblTitulo.TabIndex = 1;
+            this.lblTitulo.Text = "Nuevo registro Cliente";
             // 
             // textBox1
             // 
@@ -173,6 +176,7 @@
             this.btnActualizar.Text = "Actualizar";
             this.btnActualizar.UseCompatibleTextRendering = true;
             this.btnActualizar.UseVisualStyleBackColor = true;
+            this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
             // 
             // btnSalir
             // 
@@ -192,6 +196,10 @@
             this.btnSalir.UseVisualStyleBackColor = true;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
+            // MensajeError
+            // 
+            this.MensajeError.ContainerControl = this;
+            // 
             // frmEditarCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -200,7 +208,7 @@
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.btnActualizar);
             this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.Titulo);
+            this.Controls.Add(this.lblTitulo);
             this.Controls.Add(this.pnlactualizarclientes);
             this.Name = "frmEditarCliente";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -208,6 +216,7 @@
             this.Text = "ACTUALIZAR CLIENTE";
             this.Load += new System.EventHandler(this.frmEditarCliente_Load);
             this.pnlactualizarclientes.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.MensajeError)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -216,7 +225,7 @@
         #endregion
 
         private System.Windows.Forms.Panel pnlactualizarclientes;
-        private System.Windows.Forms.Label Titulo;
+        private System.Windows.Forms.Label lblTitulo;
         private MaterialSkin.Controls.MaterialSingleLineTextField txtEmail;
         private MaterialSkin.Controls.MaterialSingleLineTextField txtTelefono;
         private MaterialSkin.Controls.MaterialSingleLineTextField txtDireccion;
@@ -225,5 +234,6 @@
         private System.Windows.Forms.TextBox textBox1;
         private MaterialSkin.Controls.MaterialRaisedButton btnActualizar;
         private MaterialSkin.Controls.MaterialRaisedButton btnSalir;
+        private System.Windows.Forms.ErrorProvider MensajeError;
     }
 }

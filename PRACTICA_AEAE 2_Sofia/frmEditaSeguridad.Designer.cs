@@ -42,7 +42,7 @@
             this.lblEmpleado.Depth = 0;
             this.lblEmpleado.Font = new System.Drawing.Font("Roboto", 11F);
             this.lblEmpleado.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lblEmpleado.Location = new System.Drawing.Point(49, 133);
+            this.lblEmpleado.Location = new System.Drawing.Point(91, 131);
             this.lblEmpleado.MouseState = MaterialSkin.MouseState.HOVER;
             this.lblEmpleado.Name = "lblEmpleado";
             this.lblEmpleado.Size = new System.Drawing.Size(76, 19);
@@ -118,7 +118,7 @@
             this.txtClave.MaxLength = 32767;
             this.txtClave.MouseState = MaterialSkin.MouseState.HOVER;
             this.txtClave.Name = "txtClave";
-            this.txtClave.PasswordChar = '\0';
+            this.txtClave.PasswordChar = '*';
             this.txtClave.SelectedText = "";
             this.txtClave.SelectionLength = 0;
             this.txtClave.SelectionStart = 0;

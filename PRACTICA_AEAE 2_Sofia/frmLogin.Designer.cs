@@ -34,8 +34,8 @@
             this.panelDerecho = new System.Windows.Forms.Panel();
             this.btnCancelar = new MaterialSkin.Controls.MaterialRaisedButton();
             this.btnValidar = new MaterialSkin.Controls.MaterialRaisedButton();
-            this.txtPasword = new MaterialSkin.Controls.MaterialSingleLineTextField();
-            this.txtUsuario = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.Txtpasword = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.TxtUsuario = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.lblTitulo = new MaterialSkin.Controls.MaterialLabel();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.panelIzquierdo.SuspendLayout();
@@ -68,8 +68,8 @@
             // 
             this.panelDerecho.Controls.Add(this.btnCancelar);
             this.panelDerecho.Controls.Add(this.btnValidar);
-            this.panelDerecho.Controls.Add(this.txtPasword);
-            this.panelDerecho.Controls.Add(this.txtUsuario);
+            this.panelDerecho.Controls.Add(this.Txtpasword);
+            this.panelDerecho.Controls.Add(this.TxtUsuario);
             this.panelDerecho.Controls.Add(this.lblTitulo);
             this.panelDerecho.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelDerecho.Location = new System.Drawing.Point(300, 0);
@@ -83,7 +83,7 @@
             this.btnCancelar.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnCancelar.Depth = 0;
             this.btnCancelar.Icon = null;
-            this.btnCancelar.Location = new System.Drawing.Point(194, 357);
+            this.btnCancelar.Location = new System.Drawing.Point(192, 331);
             this.btnCancelar.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Primary = true;
@@ -99,7 +99,7 @@
             this.btnValidar.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnValidar.Depth = 0;
             this.btnValidar.Icon = null;
-            this.btnValidar.Location = new System.Drawing.Point(76, 357);
+            this.btnValidar.Location = new System.Drawing.Point(70, 331);
             this.btnValidar.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnValidar.Name = "btnValidar";
             this.btnValidar.Primary = true;
@@ -109,39 +109,39 @@
             this.btnValidar.UseVisualStyleBackColor = true;
             this.btnValidar.Click += new System.EventHandler(this.btnValidar_Click);
             // 
-            // txtPasword
+            // Txtpasword
             // 
-            this.txtPasword.Depth = 0;
-            this.txtPasword.Hint = "Pasword";
-            this.txtPasword.Location = new System.Drawing.Point(60, 258);
-            this.txtPasword.MaxLength = 32767;
-            this.txtPasword.MouseState = MaterialSkin.MouseState.HOVER;
-            this.txtPasword.Name = "txtPasword";
-            this.txtPasword.PasswordChar = '*';
-            this.txtPasword.SelectedText = "";
-            this.txtPasword.SelectionLength = 0;
-            this.txtPasword.SelectionStart = 0;
-            this.txtPasword.Size = new System.Drawing.Size(245, 23);
-            this.txtPasword.TabIndex = 2;
-            this.txtPasword.TabStop = false;
-            this.txtPasword.UseSystemPasswordChar = false;
+            this.Txtpasword.Depth = 0;
+            this.Txtpasword.Hint = "Pasword";
+            this.Txtpasword.Location = new System.Drawing.Point(60, 258);
+            this.Txtpasword.MaxLength = 32767;
+            this.Txtpasword.MouseState = MaterialSkin.MouseState.HOVER;
+            this.Txtpasword.Name = "Txtpasword";
+            this.Txtpasword.PasswordChar = '*';
+            this.Txtpasword.SelectedText = "";
+            this.Txtpasword.SelectionLength = 0;
+            this.Txtpasword.SelectionStart = 0;
+            this.Txtpasword.Size = new System.Drawing.Size(245, 23);
+            this.Txtpasword.TabIndex = 2;
+            this.Txtpasword.TabStop = false;
+            this.Txtpasword.UseSystemPasswordChar = false;
             // 
-            // txtUsuario
+            // TxtUsuario
             // 
-            this.txtUsuario.Depth = 0;
-            this.txtUsuario.Hint = "Usuario";
-            this.txtUsuario.Location = new System.Drawing.Point(60, 211);
-            this.txtUsuario.MaxLength = 32767;
-            this.txtUsuario.MouseState = MaterialSkin.MouseState.HOVER;
-            this.txtUsuario.Name = "txtUsuario";
-            this.txtUsuario.PasswordChar = '\0';
-            this.txtUsuario.SelectedText = "";
-            this.txtUsuario.SelectionLength = 0;
-            this.txtUsuario.SelectionStart = 0;
-            this.txtUsuario.Size = new System.Drawing.Size(245, 23);
-            this.txtUsuario.TabIndex = 1;
-            this.txtUsuario.TabStop = false;
-            this.txtUsuario.UseSystemPasswordChar = false;
+            this.TxtUsuario.Depth = 0;
+            this.TxtUsuario.Hint = "Usuario";
+            this.TxtUsuario.Location = new System.Drawing.Point(60, 211);
+            this.TxtUsuario.MaxLength = 32767;
+            this.TxtUsuario.MouseState = MaterialSkin.MouseState.HOVER;
+            this.TxtUsuario.Name = "TxtUsuario";
+            this.TxtUsuario.PasswordChar = '\0';
+            this.TxtUsuario.SelectedText = "";
+            this.TxtUsuario.SelectionLength = 0;
+            this.TxtUsuario.SelectionStart = 0;
+            this.TxtUsuario.Size = new System.Drawing.Size(245, 23);
+            this.TxtUsuario.TabIndex = 1;
+            this.TxtUsuario.TabStop = false;
+            this.TxtUsuario.UseSystemPasswordChar = false;
             // 
             // lblTitulo
             // 
@@ -188,8 +188,8 @@
         private System.Windows.Forms.ErrorProvider errorProvider1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private MaterialSkin.Controls.MaterialRaisedButton btnCancelar;
-        private MaterialSkin.Controls.MaterialSingleLineTextField txtPasword;
-        private MaterialSkin.Controls.MaterialSingleLineTextField txtUsuario;
+        private MaterialSkin.Controls.MaterialSingleLineTextField Txtpasword;
+        private MaterialSkin.Controls.MaterialSingleLineTextField TxtUsuario;
         private MaterialSkin.Controls.MaterialLabel lblTitulo;
         private MaterialSkin.Controls.MaterialRaisedButton btnValidar;
     }

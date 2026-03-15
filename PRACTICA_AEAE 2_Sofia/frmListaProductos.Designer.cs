@@ -30,17 +30,22 @@
         {
             this.lblTitulo = new System.Windows.Forms.Label();
             this.btnNuevo = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.btnBuscar = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.btnSalir = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.txtbuscarproducto = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.dataGridproductos = new System.Windows.Forms.DataGridView();
+            this.IdProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.strNombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.strCodigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.strPrecio_compra = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.strPrecio_venta = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.IdCategoria = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.strDetalle = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.strCantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DtmFechaModifica = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.strUsuariomod = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnEditar = new System.Windows.Forms.DataGridViewButtonColumn();
             this.btnBorrar = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.btnBuscar = new MaterialSkin.Controls.MaterialRaisedButton();
-            this.btnSalir = new MaterialSkin.Controls.MaterialRaisedButton();
-            this.txtbuscarproducto = new MaterialSkin.Controls.MaterialSingleLineTextField();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridproductos)).BeginInit();
             this.SuspendLayout();
             // 
@@ -69,62 +74,6 @@
             this.btnNuevo.Text = "Nuevo";
             this.btnNuevo.UseVisualStyleBackColor = true;
             this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
-            // 
-            // dataGridproductos
-            // 
-            this.dataGridproductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridproductos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.strNombre,
-            this.strCodigo,
-            this.strPrecio_compra,
-            this.strPrecio_venta,
-            this.strCantidad,
-            this.btnEditar,
-            this.btnBorrar});
-            this.dataGridproductos.Location = new System.Drawing.Point(23, 178);
-            this.dataGridproductos.Name = "dataGridproductos";
-            this.dataGridproductos.Size = new System.Drawing.Size(746, 161);
-            this.dataGridproductos.TabIndex = 2;
-            this.dataGridproductos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridproductos_CellContentClick);
-            // 
-            // strNombre
-            // 
-            this.strNombre.HeaderText = "NOMBRE";
-            this.strNombre.Name = "strNombre";
-            this.strNombre.ToolTipText = "NOMBRE";
-            this.strNombre.Width = 130;
-            // 
-            // strCodigo
-            // 
-            this.strCodigo.HeaderText = "CÓDIGO";
-            this.strCodigo.Name = "strCodigo";
-            this.strCodigo.Width = 50;
-            // 
-            // strPrecio_compra
-            // 
-            this.strPrecio_compra.HeaderText = "PRECIO_COMPRA";
-            this.strPrecio_compra.Name = "strPrecio_compra";
-            // 
-            // strPrecio_venta
-            // 
-            this.strPrecio_venta.HeaderText = "PRECIO_VENTA";
-            this.strPrecio_venta.Name = "strPrecio_venta";
-            // 
-            // strCantidad
-            // 
-            this.strCantidad.HeaderText = "CANTIDAD_STOCK";
-            this.strCantidad.Name = "strCantidad";
-            this.strCantidad.Width = 120;
-            // 
-            // btnEditar
-            // 
-            this.btnEditar.HeaderText = "EDITAR";
-            this.btnEditar.Name = "btnEditar";
-            // 
-            // btnBorrar
-            // 
-            this.btnBorrar.HeaderText = "BORRAR";
-            this.btnBorrar.Name = "btnBorrar";
             // 
             // btnBuscar
             // 
@@ -174,6 +123,99 @@
             this.txtbuscarproducto.TabStop = false;
             this.txtbuscarproducto.UseSystemPasswordChar = false;
             // 
+            // dataGridproductos
+            // 
+            this.dataGridproductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridproductos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.IdProducto,
+            this.strNombre,
+            this.strCodigo,
+            this.strPrecio_compra,
+            this.strPrecio_venta,
+            this.IdCategoria,
+            this.strDetalle,
+            this.strCantidad,
+            this.DtmFechaModifica,
+            this.strUsuariomod,
+            this.btnEditar,
+            this.btnBorrar});
+            this.dataGridproductos.Location = new System.Drawing.Point(23, 169);
+            this.dataGridproductos.Name = "dataGridproductos";
+            this.dataGridproductos.Size = new System.Drawing.Size(746, 161);
+            this.dataGridproductos.TabIndex = 2;
+            this.dataGridproductos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridproductos_CellContentClick);
+            // 
+            // IdProducto
+            // 
+            this.IdProducto.HeaderText = "IdProducto";
+            this.IdProducto.Name = "IdProducto";
+            this.IdProducto.Width = 80;
+            // 
+            // strNombre
+            // 
+            this.strNombre.HeaderText = "NOMBRE";
+            this.strNombre.Name = "strNombre";
+            this.strNombre.ToolTipText = "NOMBRE";
+            this.strNombre.Width = 130;
+            // 
+            // strCodigo
+            // 
+            this.strCodigo.HeaderText = "CÓDIGO";
+            this.strCodigo.Name = "strCodigo";
+            this.strCodigo.Width = 50;
+            // 
+            // strPrecio_compra
+            // 
+            this.strPrecio_compra.HeaderText = "PRECIO_COMPRA";
+            this.strPrecio_compra.Name = "strPrecio_compra";
+            // 
+            // strPrecio_venta
+            // 
+            this.strPrecio_venta.HeaderText = "PRECIO_VENTA";
+            this.strPrecio_venta.Name = "strPrecio_venta";
+            // 
+            // IdCategoria
+            // 
+            this.IdCategoria.HeaderText = "CATEGORIA";
+            this.IdCategoria.Name = "IdCategoria";
+            this.IdCategoria.ToolTipText = "CATEGORIA";
+            this.IdCategoria.Width = 80;
+            // 
+            // strDetalle
+            // 
+            this.strDetalle.HeaderText = "DETALLE";
+            this.strDetalle.Name = "strDetalle";
+            this.strDetalle.ToolTipText = "DETALLE";
+            // 
+            // strCantidad
+            // 
+            this.strCantidad.HeaderText = "CANTIDAD_STOCK";
+            this.strCantidad.Name = "strCantidad";
+            this.strCantidad.Width = 120;
+            // 
+            // DtmFechaModifica
+            // 
+            this.DtmFechaModifica.DataPropertyName = "DtmFechaModifica";
+            this.DtmFechaModifica.HeaderText = "FECHAMOD";
+            this.DtmFechaModifica.Name = "DtmFechaModifica";
+            this.DtmFechaModifica.ToolTipText = "FECHAMOD";
+            // 
+            // strUsuariomod
+            // 
+            this.strUsuariomod.HeaderText = "USUARIO";
+            this.strUsuariomod.Name = "strUsuariomod";
+            this.strUsuariomod.ToolTipText = "USUARIO";
+            // 
+            // btnEditar
+            // 
+            this.btnEditar.HeaderText = "EDITAR";
+            this.btnEditar.Name = "btnEditar";
+            // 
+            // btnBorrar
+            // 
+            this.btnBorrar.HeaderText = "BORRAR";
+            this.btnBorrar.Name = "btnBorrar";
+            // 
             // frmListaProductos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -197,16 +239,21 @@
 
         private System.Windows.Forms.Label lblTitulo;
         private MaterialSkin.Controls.MaterialRaisedButton btnNuevo;
-        private System.Windows.Forms.DataGridView dataGridproductos;
         private MaterialSkin.Controls.MaterialRaisedButton btnBuscar;
         private MaterialSkin.Controls.MaterialRaisedButton btnSalir;
+        private MaterialSkin.Controls.MaterialSingleLineTextField txtbuscarproducto;
+        private System.Windows.Forms.DataGridView dataGridproductos;
+        private System.Windows.Forms.DataGridViewTextBoxColumn IdProducto;
         private System.Windows.Forms.DataGridViewTextBoxColumn strNombre;
         private System.Windows.Forms.DataGridViewTextBoxColumn strCodigo;
         private System.Windows.Forms.DataGridViewTextBoxColumn strPrecio_compra;
         private System.Windows.Forms.DataGridViewTextBoxColumn strPrecio_venta;
+        private System.Windows.Forms.DataGridViewTextBoxColumn IdCategoria;
+        private System.Windows.Forms.DataGridViewTextBoxColumn strDetalle;
         private System.Windows.Forms.DataGridViewTextBoxColumn strCantidad;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DtmFechaModifica;
+        private System.Windows.Forms.DataGridViewTextBoxColumn strUsuariomod;
         private System.Windows.Forms.DataGridViewButtonColumn btnEditar;
         private System.Windows.Forms.DataGridViewButtonColumn btnBorrar;
-        private MaterialSkin.Controls.MaterialSingleLineTextField txtbuscarproducto;
     }
 }

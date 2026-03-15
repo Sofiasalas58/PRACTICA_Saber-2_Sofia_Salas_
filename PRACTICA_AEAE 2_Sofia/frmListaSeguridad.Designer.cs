@@ -1,4 +1,4 @@
-﻿namespace PRACTICA_AEAE_2_Sofia
+namespace PRACTICA_AEAE_2_Sofia
 {
     partial class frmListaSeguridad
     {
@@ -29,16 +29,17 @@
         private void InitializeComponent()
         {
             this.dataGridSeguridad = new System.Windows.Forms.DataGridView();
-            this.strnombreEmpleado = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.strUsuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.strClave = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnEditar = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.btnBorrar = new System.Windows.Forms.DataGridViewButtonColumn();
             this.btnSalir = new MaterialSkin.Controls.MaterialRaisedButton();
             this.btnBuscar = new MaterialSkin.Controls.MaterialRaisedButton();
             this.btnNuevo = new MaterialSkin.Controls.MaterialRaisedButton();
             this.txtbuscarcategoria = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.lblTitulo = new System.Windows.Forms.Label();
+            this.IdSeguridad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.strnombreEmpleado = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.strUsuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.strClave = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnEditar = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.btnBorrar = new System.Windows.Forms.DataGridViewButtonColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridSeguridad)).BeginInit();
             this.SuspendLayout();
             // 
@@ -46,6 +47,7 @@
             // 
             this.dataGridSeguridad.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridSeguridad.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.IdSeguridad,
             this.strnombreEmpleado,
             this.strUsuario,
             this.strClave,
@@ -53,46 +55,9 @@
             this.btnBorrar});
             this.dataGridSeguridad.Location = new System.Drawing.Point(68, 163);
             this.dataGridSeguridad.Name = "dataGridSeguridad";
-            this.dataGridSeguridad.Size = new System.Drawing.Size(585, 177);
+            this.dataGridSeguridad.Size = new System.Drawing.Size(633, 177);
             this.dataGridSeguridad.TabIndex = 27;
             this.dataGridSeguridad.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridSeguridad_CellContentClick);
-            // 
-            // strnombreEmpleado
-            // 
-            this.strnombreEmpleado.HeaderText = "NOMBRE_EMPLEADO";
-            this.strnombreEmpleado.Name = "strnombreEmpleado";
-            this.strnombreEmpleado.ToolTipText = "NOMBRE_EMPLEADO";
-            this.strnombreEmpleado.Width = 180;
-            // 
-            // strUsuario
-            // 
-            this.strUsuario.HeaderText = "USUARIO";
-            this.strUsuario.Name = "strUsuario";
-            this.strUsuario.ToolTipText = "USUARIO";
-            // 
-            // strClave
-            // 
-            this.strClave.HeaderText = "CLAVE";
-            this.strClave.Name = "strClave";
-            this.strClave.ToolTipText = "CLAVE";
-            // 
-            // btnEditar
-            // 
-            this.btnEditar.HeaderText = "EDITAR";
-            this.btnEditar.Name = "btnEditar";
-            this.btnEditar.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.btnEditar.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.btnEditar.Text = "EDITAR";
-            this.btnEditar.UseColumnTextForButtonValue = true;
-            this.btnEditar.Width = 80;
-            // 
-            // btnBorrar
-            // 
-            this.btnBorrar.HeaderText = "BORRAR";
-            this.btnBorrar.Name = "btnBorrar";
-            this.btnBorrar.Text = "BORRAR";
-            this.btnBorrar.UseColumnTextForButtonValue = true;
-            this.btnBorrar.Width = 80;
             // 
             // btnSalir
             // 
@@ -139,6 +104,7 @@
             this.btnNuevo.TabIndex = 24;
             this.btnNuevo.Text = "Nuevo";
             this.btnNuevo.UseVisualStyleBackColor = true;
+            this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
             // 
             // txtbuscarcategoria
             // 
@@ -167,6 +133,50 @@
             this.lblTitulo.TabIndex = 22;
             this.lblTitulo.Text = "Seguridad";
             // 
+            // IdSeguridad
+            // 
+            this.IdSeguridad.HeaderText = "IdSeguridad";
+            this.IdSeguridad.Name = "IdSeguridad";
+            this.IdSeguridad.ToolTipText = "IdSeguridad";
+            this.IdSeguridad.Width = 80;
+            // 
+            // strnombreEmpleado
+            // 
+            this.strnombreEmpleado.HeaderText = "NOMBRE_EMPLEADO";
+            this.strnombreEmpleado.Name = "strnombreEmpleado";
+            this.strnombreEmpleado.ToolTipText = "NOMBRE_EMPLEADO";
+            this.strnombreEmpleado.Width = 150;
+            // 
+            // strUsuario
+            // 
+            this.strUsuario.HeaderText = "USUARIO";
+            this.strUsuario.Name = "strUsuario";
+            this.strUsuario.ToolTipText = "USUARIO";
+            // 
+            // strClave
+            // 
+            this.strClave.HeaderText = "CLAVE";
+            this.strClave.Name = "strClave";
+            this.strClave.ToolTipText = "CLAVE";
+            // 
+            // btnEditar
+            // 
+            this.btnEditar.HeaderText = "EDITAR";
+            this.btnEditar.Name = "btnEditar";
+            this.btnEditar.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.btnEditar.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.btnEditar.Text = "EDITAR";
+            this.btnEditar.UseColumnTextForButtonValue = true;
+            this.btnEditar.Width = 80;
+            // 
+            // btnBorrar
+            // 
+            this.btnBorrar.HeaderText = "BORRAR";
+            this.btnBorrar.Name = "btnBorrar";
+            this.btnBorrar.Text = "BORRAR";
+            this.btnBorrar.UseColumnTextForButtonValue = true;
+            this.btnBorrar.Width = 80;
+            // 
             // frmListaSeguridad
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -180,6 +190,7 @@
             this.Controls.Add(this.lblTitulo);
             this.Name = "frmListaSeguridad";
             this.Text = "frmListaSeguridad";
+            this.Load += new System.EventHandler(this.frmListaSeguridad_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridSeguridad)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -194,6 +205,7 @@
         private MaterialSkin.Controls.MaterialRaisedButton btnNuevo;
         private MaterialSkin.Controls.MaterialSingleLineTextField txtbuscarcategoria;
         private System.Windows.Forms.Label lblTitulo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn IdSeguridad;
         private System.Windows.Forms.DataGridViewTextBoxColumn strnombreEmpleado;
         private System.Windows.Forms.DataGridViewTextBoxColumn strUsuario;
         private System.Windows.Forms.DataGridViewTextBoxColumn strClave;
